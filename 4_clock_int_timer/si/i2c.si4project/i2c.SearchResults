@@ -1,0 +1,8 @@
+---- rico_clkout Matches (7 in 2 files) ----
+clkout_init in clkout.c (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : 	rico_clkout.clkout_channel  = CLKOUT1;
+clkout_init in clkout.c (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : 	rico_clkout.clkout_source1  = L3F_CLK;
+clkout_init in clkout.c (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : 	rico_clkout.clkout_source2  = EXTDEV_PLL_CLKOUT;
+clkout_init in clkout.c (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : 	rico_clkout.clkout1_div_osc = 0;
+clkout_init in clkout.c (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : 	rico_clkout.clkout2_div1    = 0;
+clkout_init in clkout.c (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : 	rico_clkout.clkout2_div2    = 0;
+clkout_struct in clkout.h (E:\WorkDirectory\Firendly4378\4_clock_int_timer) : }rico_clkout;;

@@ -1,0 +1,4 @@
+---- get_key_val Matches (2 in 2 files) ----
+
+key.c (E:\WorkDirectory\Firendly4378\8_am437x_clkout) line 55 : unsigned char get_key_val(void)
+key.h (E:\WorkDirectory\Firendly4378\8_am437x_clkout) line 23 : extern unsigned char get_key_val(void);

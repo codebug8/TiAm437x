@@ -1,0 +1,185 @@
+#ifndef   _AM437X_DSS_H_
+#define   _AM437X_DSS_H_
+
+#include  "AM437X_DataType.h"
+#include  "AM437X_Mapping.h"
+
+typedef struct {
+	uint32_t REVISION;             //000h
+	uint32_t RESERVED0[3];         //004h
+	uint32_t SYSCFG;               //010h
+	uint32_t SYSSTS;               //014h
+	uint32_t IRQSTS;               //018h
+	uint32_t IRQEN;                //01Ch
+	uint32_t RESERVED1[8];         //020h
+	uint32_t CTRL;                 //040h
+	uint32_t CFG;                  //044h
+	uint32_t RESERVED2[1];         //048h
+	uint32_t DEFAULT_COLOR_0;      //04Ch
+	uint32_t DEFAULT_COLOR_1;      //050h
+	uint32_t TRANS_COLOR_0;        //054h
+	uint32_t TRANS_COLOR_1;        //058h
+	uint32_t LINE_STS;             //05Ch
+	uint32_t LINE_NUMBER;          //060h
+	uint32_t TIMING_H;             //064h
+	uint32_t TIMING_V;             //068h
+	uint32_t POL_FREQ;             //06Ch
+	uint32_t DIVISOR;              //070h
+	uint32_t GLOBAL_ALPHA;         //074h
+	uint32_t SIZE_DIG;             //078h
+	uint32_t SIZE_LCD;             //07Ch
+	uint32_t GFX_BA_0;             //080h
+	uint32_t GFX_BA_1;             //084h
+	uint32_t GFX_POSITION;         //088h
+	uint32_t GFX_SIZE;             //08Ch
+	uint32_t RESERVED3[4];         //090h
+	uint32_t GFX_ATTRS;            //0A0h
+	uint32_t GFX_FIFO_THR;         //0A4h
+	uint32_t GFX_FIFO_SIZE_STS;    //0A8h
+	uint32_t GFX_ROW_INC;          //0ACh
+	uint32_t GFX_PIXEL_INC;        //0B0h
+	uint32_t GFX_WINDOW_SKIP;      //0B4h
+	uint32_t GFX_TBL_BA;           //0B8h
+	uint32_t VID1_BA_0;            //0BCh
+	uint32_t VID1_BA_1;            //0C0h
+	uint32_t VID1_POSITION;        //0C4h
+	uint32_t VID1_SIZE;            //0C8h
+	uint32_t VID1_ATTRS;           //0CCh
+	uint32_t VID1_FIFO_THR;        //0D0h
+	uint32_t VID1_FIFO_SIZE_STS;   //0D4h
+	uint32_t VID1_ROW_INC;         //0D8h
+	uint32_t VID1_PIXEL_INC;       //0DCh
+	uint32_t VID1_FIR;             //0E0h
+	uint32_t VID1_PICTURE_SIZE;    //0E4h
+	uint32_t VID1_ACCU_0;          //0E8h
+	uint32_t VID1_ACCU_1;          //0ECh
+	uint32_t VID1_FIR_COEF_H_0;    //0F0h
+	uint32_t VID1_FIR_COEF_HV_0;   //0F4h
+	uint32_t VID1_FIR_COEF_H_1;    //0F8h
+	uint32_t VID1_FIR_COEF_HV_1;   //0FCh
+	uint32_t VID1_FIR_COEF_H_2;    //100h
+	uint32_t VID1_FIR_COEF_HV_2;   //104h
+	uint32_t VID1_FIR_COEF_H_3;    //108h
+	uint32_t VID1_FIR_COEF_HV_3;   //10Ch
+	uint32_t VID1_FIR_COEF_H_4;    //110h
+	uint32_t VID1_FIR_COEF_HV_4;   //114h
+	uint32_t VID1_FIR_COEF_H_5;    //118h
+	uint32_t VID1_FIR_COEF_HV_5;   //11Ch
+	uint32_t VID1_FIR_COEF_H_6;    //120h
+	uint32_t VID1_FIR_COEF_HV_6;   //124h
+	uint32_t VID1_FIR_COEF_H_7;    //128h
+	uint32_t VID1_FIR_COEF_HV_7;   //12Ch
+	uint32_t VID1_CONV_COEF0;      //130h
+	uint32_t VID1_CONV_COEF1;      //134h
+	uint32_t VID1_CONV_COEF2;      //138h
+	uint32_t VID1_CONV_COEF3;      //13Ch
+	uint32_t VID1_CONV_COEF4;      //140h
+	uint32_t RESERVED4[2];         //144h
+	uint32_t VID2_BA_0;            //14Ch
+	uint32_t VID2_BA_1;            //150h
+	uint32_t VID2_POSITION;        //154h
+	uint32_t VID2_SIZE;            //158h
+	uint32_t VID2_ATTRS;           //15Ch
+	uint32_t VID2_FIFO_THR;        //160h
+	uint32_t VID2_FIFO_SIZE_STS;   //164h
+	uint32_t VID2_ROW_INC;         //168h
+	uint32_t VID2_PIXEL_INC;       //16Ch
+	uint32_t VID2_FIR;             //170h
+	uint32_t VID2_PICTURE_SIZE;    //174h
+	uint32_t VID2_ACCU_0;          //178h
+	uint32_t VID2_ACCU_1;          //17Ch
+	uint32_t VID2_FIR_COEF_H_0;    //180h
+	uint32_t VID2_FIR_COEF_HV_0;   //184h
+	uint32_t VID2_FIR_COEF_H_1;    //188h
+	uint32_t VID2_FIR_COEF_HV_1;   //18Ch
+	uint32_t VID2_FIR_COEF_H_2;    //190h
+	uint32_t VID2_FIR_COEF_HV_2;   //194h
+	uint32_t VID2_FIR_COEF_H_3;    //198h
+	uint32_t VID2_FIR_COEF_HV_3;   //19Ch
+	uint32_t VID2_FIR_COEF_H_4;    //1A0h
+	uint32_t VID2_FIR_COEF_HV_4;   //1A4h
+	uint32_t VID2_FIR_COEF_H_5;    //1A8h
+	uint32_t VID2_FIR_COEF_HV_5;   //1ACh
+	uint32_t VID2_FIR_COEF_H_6;    //1B0h
+	uint32_t VID2_FIR_COEF_HV_6;   //1B4h
+	uint32_t VID2_FIR_COEF_H_7;    //1B8h
+	uint32_t VID2_FIR_COEF_HV_7;   //1BCh
+	uint32_t VID2_CONV_COEF0;      //1C0h
+	uint32_t VID2_CONV_COEF1;      //1C4h
+	uint32_t VID2_CONV_COEF2;      //1C8h
+	uint32_t VID2_CONV_COEF3;      //1CCh
+	uint32_t VID2_CONV_COEF4;      //1D0h
+	uint32_t DATA_CYCLE_0;         //1D4h
+	uint32_t DATA_CYCLE_1;         //1D8h
+	uint32_t DATA_CYCLE_2;         //1DCh
+	uint32_t VID1_FIR_COEF_V_0;    //1E0h
+	uint32_t VID1_FIR_COEF_V_1;    //1E4h
+	uint32_t VID1_FIR_COEF_V_2;    //1E8h
+	uint32_t VID1_FIR_COEF_V_3;    //1ECh
+	uint32_t VID1_FIR_COEF_V_4;    //1F0h
+	uint32_t VID1_FIR_COEF_V_5;    //1F4h
+	uint32_t VID1_FIR_COEF_V_6;    //1F8h
+	uint32_t VID1_FIR_COEF_V_7;    //1FCh
+	uint32_t VID2_FIR_COEF_V_0;    //200h
+	uint32_t VID2_FIR_COEF_V_1;    //204h
+	uint32_t VID2_FIR_COEF_V_2;    //208h
+	uint32_t VID2_FIR_COEF_V_3;    //20Ch
+	uint32_t VID2_FIR_COEF_V_4;    //210h
+	uint32_t VID2_FIR_COEF_V_5;    //214h
+	uint32_t VID2_FIR_COEF_V_6;    //218h
+	uint32_t VID2_FIR_COEF_V_7;    //21Ch
+	uint32_t CPR_COEF_R;           //220h
+	uint32_t CPR_COEF_G;           //224h
+	uint32_t CPR_COEF_B;           //228h
+	uint32_t GFX_PRELOAD;          //22Ch
+	uint32_t VID1_PRELOAD;         //230h
+	uint32_t VID2_PRELOAD;         //234h
+}DISPC_Typedef;
+
+typedef struct {
+	uint32_t REVISIONNUMBER;       //000h
+	uint32_t RESERVED0[3];         //004h
+	uint32_t SYSCONFIG;            //010h
+	uint32_t SYSSTS;               //014h
+	uint32_t IRQSTS;               //018h
+	uint32_t RESERVED1[9];         //01Ch
+	uint32_t CTRL;                 //040h
+	uint32_t RESERVED2[6];         //044h
+	uint32_t CLK_STS;              //05Ch
+}TOP_Typedef;
+
+typedef struct {
+	uint32_t REVISION;             //000h
+	uint32_t RESERVED0[3];         //004h
+	uint32_t SYSCONFIG;            //010h
+	uint32_t SYSSTS;               //014h
+	uint32_t RESERVED1[10];        //018h
+	uint32_t CTRL;                 //040h
+	uint32_t PIXEL_CNT;            //044h
+	uint32_t LINE_NUMBER;          //048h
+	uint32_t CMD;                  //04Ch
+	uint32_t PARAM;                //050h
+	uint32_t DATA;                 //054h
+	uint32_t READ;                 //058h
+	uint32_t STS;                  //05Ch
+	uint32_t CONFIG_0;             //060h
+	uint32_t ONOFF_TIME_0;         //064h
+	uint32_t CYCLE_TIME_0;         //068h
+	uint32_t DATA_CYCLE1_0;        //06Ch
+	uint32_t DATA_CYCLE2_0;        //070h
+	uint32_t DATA_CYCLE3_0;        //074h
+	uint32_t CONFIG_1;             //078h
+	uint32_t ONOFF_TIME_1;         //07Ch
+	uint32_t CYCLE_TIME_1;         //080h
+	uint32_t DATA_CYCLE1_1;        //084h
+	uint32_t DATA_CYCLE2_1;        //088h
+	uint32_t DATA_CYCLE3_1;        //08Ch
+	uint32_t VSYNC_WIDTH;          //090h
+	uint32_t HSYNC_WIDTH;          //094h
+}RFBI_Typedef;
+
+#define   DISPC 	        ((volatile DISPC_Typedef *)DSS_DISPC_BASE)
+#define   TOP 	            ((volatile TOP_Typedef   *)DSS_TOP_BASE )
+#define   RFBI 	            ((volatile RFBI_Typedef  *)DSS_RFBI_BASE)
+
+#endif
